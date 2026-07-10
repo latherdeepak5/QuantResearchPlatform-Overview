@@ -4,13 +4,19 @@ This repository is a public, read-only overview of an active quantitative resear
 
 The implementation code, Pine scripts, datasets, private research notebooks, and executable strategy logic are intentionally not included here.
 
-## Contents
+## Quick Links
 
-- [Research Log](research-log.md)
+- [MES Futures Research Case Study](case-studies/mes-futures-research.md)
+- [Performance Snapshots](performance-snapshots.md)
 - [Validation Methodology](validation-methodology.md)
 - [Risk Principles](risk-principles.md)
+- [Research Log](research-log.md)
 - [Roadmap](roadmap.md)
 - [FAQ](faq.md)
+
+## Visual Snapshot
+
+![MES Research Snapshot](assets/mes-research-snapshot.svg)
 
 ## Purpose
 
@@ -40,8 +46,8 @@ The current research is focused on Micro E-mini S&P 500 futures (`MES`) trend-pu
 Recent research suggests the strategy behaves better when:
 
 - Entries remain close to the EMA 21 / EMA 50 pullback area
-- Weak early short-entry windows are filtered out
-- Full positions are not allowed to drift uncontrolled late in the session
+- Weak short-entry windows are filtered out
+- Full positions are managed differently from scaled runner positions
 - Scaled runner contracts are allowed to continue after partial profits
 - Daily max-loss exits are treated as a warning sign, not a preferred exit style
 
