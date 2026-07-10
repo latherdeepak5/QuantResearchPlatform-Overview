@@ -16,7 +16,9 @@ The implementation code, Pine scripts, datasets, private research notebooks, and
 
 ## Visual Snapshot
 
-![MES Research Snapshot](assets/mes-research-snapshot.svg)
+
+
+![Python Diagnostics Snapshot](assets/python-diagnostics-snapshot.svg)
 
 ## Purpose
 
