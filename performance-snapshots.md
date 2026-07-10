@@ -30,6 +30,38 @@ This page records high-level public research snapshots. These are not trading re
 | Short contribution | +$7,466.25 |
 | Grouped positions reviewed | 78 |
 
+## Snapshot: Private Python Diagnostics Review, 2024-2026
+
+| Field | Value |
+|---|---:|
+| Instrument | MES |
+| Approximate range | Sep 2024 - Jul 2026 |
+| Final capital | $119,984.49 |
+| Total return | 19.98% |
+| Profit factor | 5.00 |
+| Win rate | 83.58% |
+| Max drawdown | -2.25% |
+| Long contribution | +$11,241.35 |
+| Short contribution | +$8,782.14 |
+| Closed trade rows reviewed | 67 |
+
+## Monthly Consistency Snapshot
+
+| Metric | Value |
+|---|---:|
+| Profitable months reviewed | 14 of 18 |
+| Best month | Apr 2026, +$5,927.06 |
+| Weakest month | Jan 2026, -$1,127.00 |
+
+## Exit-Quality Snapshot
+
+| Exit Category | Closed Rows | Aggregate PnL |
+|---|---:|---:|
+| Partial profit exits | 28 | +$7,817.67 |
+| Runner exits | 10 | +$7,675.00 |
+| Stop / trailing exits | 16 | +$4,007.57 |
+| Daily max-loss exits | 3 | -$2,473.00 |
+
 ## Interpretation Notes
 
 - Results are historical simulations and may not match live execution.
@@ -37,6 +69,7 @@ This page records high-level public research snapshots. These are not trading re
 - Daily max-loss exits are reviewed as a risk warning category.
 - Runner contribution is tracked separately from initial partial profit-taking.
 - Long and short systems are reviewed separately because they often behave differently.
+- Python diagnostics are used to understand behavior; TradingView deep tests are used as a separate validation layer.
 
 ## What These Snapshots Do Not Show
 
