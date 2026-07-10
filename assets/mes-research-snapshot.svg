@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="460" viewBox="0 0 1100 460" role="img" aria-label="MES futures research snapshot">
+  <rect width="1100" height="460" fill="#0f172a"/>
+  <rect x="34" y="34" width="1032" height="392" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="64" y="86" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">MES Futures Research Snapshot</text>
+  <text x="64" y="122" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="18">Public overview only - implementation and exact rules remain private</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="64" y="166" width="300" height="86" rx="12" fill="#1f2937" stroke="#334155"/>
+    <text x="88" y="198" fill="#94a3b8" font-size="16">Net Profit Snapshot</text>
+    <text x="88" y="232" fill="#22c55e" font-size="30" font-weight="700">+$22,682.50</text>
+    <rect x="400" y="166" width="300" height="86" rx="12" fill="#1f2937" stroke="#334155"/>
+    <text x="424" y="198" fill="#94a3b8" font-size="16">Profit Factor</text>
+    <text x="424" y="232" fill="#facc15" font-size="30" font-weight="700">1.53</text>
+    <rect x="736" y="166" width="300" height="86" rx="12" fill="#1f2937" stroke="#334155"/>
+    <text x="760" y="198" fill="#94a3b8" font-size="16">Intrabar Max Drawdown</text>
+    <text x="760" y="232" fill="#fb7185" font-size="30" font-weight="700">7.10%</text>
+    <rect x="64" y="282" width="300" height="86" rx="12" fill="#1f2937" stroke="#334155"/>
+    <text x="88" y="314" fill="#94a3b8" font-size="16">Long Contribution</text>
+    <text x="88" y="348" fill="#38bdf8" font-size="30" font-weight="700">+$12,922.50</text>
+    <rect x="400" y="282" width="300" height="86" rx="12" fill="#1f2937" stroke="#334155"/>
+    <text x="424" y="314" fill="#94a3b8" font-size="16">Short Contribution</text>
+    <text x="424" y="348" fill="#38bdf8" font-size="30" font-weight="700">+$9,760.00</text>
+    <rect x="736" y="282" width="300" height="86" rx="12" fill="#1f2937" stroke="#334155"/>
+    <text x="760" y="314" fill="#94a3b8" font-size="16">Validation Range</text>
+    <text x="760" y="348" fill="#e5e7eb" font-size="30" font-weight="700">2020-2026</text>
+  </g>
+  <text x="64" y="402" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="14">Historical deep-test research snapshot. Not financial advice. Results do not guarantee future performance.</text>
+</svg>
