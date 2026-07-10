@@ -4,6 +4,14 @@ This repository is a public, read-only overview of an active quantitative resear
 
 The implementation code, Pine scripts, datasets, private research notebooks, and executable strategy logic are intentionally not included here.
 
+## Contents
+
+- [Research Log](research-log.md)
+- [Validation Methodology](validation-methodology.md)
+- [Risk Principles](risk-principles.md)
+- [Roadmap](roadmap.md)
+- [FAQ](faq.md)
+
 ## Purpose
 
 The project tracks high-level research progress for a futures trading research platform, including:
