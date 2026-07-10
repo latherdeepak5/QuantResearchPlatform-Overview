@@ -62,6 +62,10 @@ This page records high-level public research snapshots. These are not trading re
 | Stop / trailing exits | 16 | +$4,007.57 |
 | Daily max-loss exits | 3 | -$2,473.00 |
 
+
+## Visual Snapshot: Python Diagnostics
+
+![Python Diagnostics Snapshot](assets/python-diagnostics-snapshot.svg)
 ## Interpretation Notes
 
 - Results are historical simulations and may not match live execution.
