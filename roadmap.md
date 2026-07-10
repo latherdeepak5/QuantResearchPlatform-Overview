@@ -9,6 +9,8 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Review daily max-loss clusters and identify preventable entry patterns
 - Compare results using different EMA-distance tolerances
 - Separate long-side and short-side parameter reviews
+- Review daily decision matrices to separate valid no-trade days from overly restrictive filters
+- Compare broker-fed paper signals with TradingView and private Python diagnostics
 
 ## Medium-Term Research
 
@@ -17,6 +19,8 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Study monthly and yearly consistency
 - Track runner contribution versus partial-exit contribution
 - Build clearer reporting around position-level drawdown
+- Maintain a journal-style review process for entry quality, exit quality, and mistake tags
+- Expand paper-trading monitoring before enabling any automated paper execution
 
 ## Longer-Term Research
 
@@ -25,6 +29,7 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Improve robustness checks across symbols and timeframes
 - Build a cleaner public reporting layer that shows results without exposing private logic
 - Document research decisions as versioned public notes
+- Evaluate whether broker-paper results remain aligned before considering limited live testing
 
 ## Public Repository Goals
 

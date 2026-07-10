@@ -16,6 +16,14 @@ TradingView deep-test exports are used as an independent validation layer. The g
 
 TradingView exports are reviewed by grouping split trade rows into real positions. This avoids overcounting partial exits and gives a clearer view of actual position-level behavior.
 
+### Explainable Decision Matrix
+
+Private diagnostics also review each trading day as a decision event. This includes both trade days and no-trade days. The purpose is to identify whether a day was filtered for valid reasons, such as trend, timing, volume, pullback quality, or candle confirmation, without exposing exact rule logic.
+
+### Paper-Trading Monitor
+
+The next validation layer is paper-trading signal monitoring. This layer is intended to compare broker-fed market data and live signal timing against the private Python research engine before any automated order routing is considered.
+
 ## What Gets Reviewed
 
 - Net profit
@@ -29,6 +37,8 @@ TradingView exports are reviewed by grouping split trade rows into real position
 - Monthly and yearly consistency
 - Daily max-loss frequency
 - Runner contribution
+- Trade/no-trade decision explanations
+- Paper-monitor signal parity
 
 ## Interpretation Principles
 
@@ -37,6 +47,8 @@ TradingView exports are reviewed by grouping split trade rows into real position
 - Daily max-loss exits are treated as a sign that entries or stops need improvement.
 - Long and short performance are reviewed separately.
 - Recent-market performance is compared against older data to reduce recency bias.
+- No-trade days are reviewed as part of the strategy, not ignored.
+- Paper trading should start in monitor-only mode before any automated execution.
 
 ## Limitations
 

@@ -28,6 +28,8 @@ The project tracks high-level research progress for a futures trading research p
 - Backtest summaries
 - Risk-management findings
 - TradingView deep-test observations
+- Explainable trade-decision diagnostics
+- Paper-trading readiness milestones
 - Future improvement ideas
 
 This repository is meant for visibility and communication only. It is not the working source-code repository.
@@ -42,6 +44,7 @@ The current research is focused on Micro E-mini S&P 500 futures (`MES`) trend-pu
 - Reducing large daily-loss events
 - Comparing Python backtests with TradingView deep-test exports
 - Separating strong entry windows from weak entry windows
+- Building a journal-style review process for every trade and every no-trade day
 
 ## Current High-Level Findings
 
@@ -52,6 +55,8 @@ Recent research suggests the strategy behaves better when:
 - Full positions are managed differently from scaled runner positions
 - Scaled runner contracts are allowed to continue after partial profits
 - Daily max-loss exits are treated as a warning sign, not a preferred exit style
+- Daily checklists make it easier to separate valid no-trade days from missed opportunities
+- Paper-trading infrastructure should begin in monitor-only mode before any automated order routing
 
 These findings are still under active validation and may change as more data is tested.
 

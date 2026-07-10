@@ -36,14 +36,14 @@ This page records high-level public research snapshots. These are not trading re
 |---|---:|
 | Instrument | MES |
 | Approximate range | Sep 2024 - Jul 2026 |
-| Final capital | $119,984.49 |
-| Total return | 19.98% |
-| Profit factor | 5.00 |
-| Win rate | 83.58% |
+| Final capital | $121,307.52 |
+| Total return | 21.31% |
+| Profit factor | 5.27 |
+| Win rate | 84.06% |
 | Max drawdown | -2.25% |
-| Long contribution | +$11,241.35 |
+| Long contribution | +$12,565.37 |
 | Short contribution | +$8,782.14 |
-| Closed trade rows reviewed | 67 |
+| Closed trade rows reviewed | 69 |
 
 ## Monthly Consistency Snapshot
 
@@ -57,8 +57,8 @@ This page records high-level public research snapshots. These are not trading re
 
 | Exit Category | Closed Rows | Aggregate PnL |
 |---|---:|---:|
-| Partial profit exits | 28 | +$7,817.67 |
-| Runner exits | 10 | +$7,675.00 |
+| Partial profit exits | 29 | +$8,190.20 |
+| Runner exits | 11 | +$8,626.50 |
 | Stop / trailing exits | 16 | +$4,007.57 |
 | Daily max-loss exits | 3 | -$2,473.00 |
 
@@ -74,6 +74,8 @@ This page records high-level public research snapshots. These are not trading re
 - Runner contribution is tracked separately from initial partial profit-taking.
 - Long and short systems are reviewed separately because they often behave differently.
 - Python diagnostics are used to understand behavior; TradingView deep tests are used as a separate validation layer.
+- Daily decision matrices are used to review both trade days and no-trade days.
+- Paper-trading monitoring is treated as a validation step, not proof of live readiness.
 
 ## What These Snapshots Do Not Show
 

@@ -34,6 +34,8 @@ The private research workflow reviewed trades by:
 - Drawdown
 - Trade duration
 - Recent-data and older-data behavior
+- Daily trade/no-trade decision explanations
+- Journal-style post-trade review fields
 
 The TradingView exports were also grouped into real positions to avoid overcounting partial exits as separate strategy decisions.
 
@@ -68,14 +70,14 @@ A private Python backtest snapshot from September 2024 through July 2026 was use
 
 | Metric | Snapshot |
 |---|---:|
-| Final capital | $119,984.49 |
-| Total return | 19.98% |
-| Win rate | 83.58% |
-| Profit factor | 5.00 |
+| Final capital | $121,307.52 |
+| Total return | 21.31% |
+| Win rate | 84.06% |
+| Profit factor | 5.27 |
 | Max drawdown | -2.25% |
-| Long contribution | +$11,241.35 |
+| Long contribution | +$12,565.37 |
 | Short contribution | +$8,782.14 |
-| Closed trade rows reviewed | 67 |
+| Closed trade rows reviewed | 69 |
 
 ### Diagnostic Takeaways
 
@@ -85,6 +87,7 @@ A private Python backtest snapshot from September 2024 through July 2026 was use
 - Partial exits and runner exits were both meaningful contributors.
 - Daily max-loss exits remained a risk warning category, even when total performance was positive.
 - Entry timing, weekday behavior, and worst-trade review were used as diagnostics rather than standalone trading rules.
+- No-trade days are now reviewed through a daily decision matrix to determine which filters blocked activity.
 
 ## Exit-Quality Summary
 
@@ -92,8 +95,8 @@ The private Python diagnostic export showed the value of separating exits by pur
 
 | Exit Category | Closed Rows | Aggregate PnL |
 |---|---:|---:|
-| Partial profit exits | 28 | +$7,817.67 |
-| Runner exits | 10 | +$7,675.00 |
+| Partial profit exits | 29 | +$8,190.20 |
+| Runner exits | 11 | +$8,626.50 |
 | Stop / trailing exits | 16 | +$4,007.57 |
 | Daily max-loss exits | 3 | -$2,473.00 |
 
@@ -106,6 +109,8 @@ This helped confirm that the research should continue focusing on preventing ful
 - Runner exits contributed positively in multiple review cycles.
 - Allowing all positions to continue indefinitely increased risk; allowing only reduced-size runners to continue was cleaner.
 - Daily max-loss events remained the largest warning category and require continued research.
+- Explainable daily diagnostics improved the review process by making no-trade days auditable.
+- Paper-trading preparation has begun in signal-monitoring mode before any automated execution.
 
 ## Current Interpretation
 
@@ -117,6 +122,8 @@ The strategy appears more stable when treated as a selective research system wit
 - Are long and short systems better managed with fully separate parameters?
 - Which results remain stable after walk-forward and out-of-sample validation?
 - Does similar behavior appear in MNQ or other futures markets?
+- Which no-trade days were correctly filtered, and which were missed opportunities?
+- Do paper-trading signals remain aligned with private Python and TradingView review outputs?
 
 ## Confidentiality Note
 
