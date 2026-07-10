@@ -48,7 +48,7 @@ The research tested several non-code-level ideas:
 - Avoiding uncontrolled full-position exposure late in the session
 - Reviewing whether daily max-loss exits were caused by specific repeatable patterns
 
-## Representative Research Snapshot
+## Representative TradingView Research Snapshot
 
 One extended TradingView deep-test snapshot from January 2020 through July 2026 showed:
 
@@ -62,7 +62,42 @@ One extended TradingView deep-test snapshot from January 2020 through July 2026 
 | Short contribution | +$9,760.00 |
 | Grouped positions reviewed | 155 |
 
-This is a research snapshot, not a performance claim or trading recommendation.
+## Private Python Backtest Diagnostics Snapshot
+
+A private Python backtest snapshot from September 2024 through July 2026 was used to study diagnostics and exit quality in more detail.
+
+| Metric | Snapshot |
+|---|---:|
+| Final capital | $119,984.49 |
+| Total return | 19.98% |
+| Win rate | 83.58% |
+| Profit factor | 5.00 |
+| Max drawdown | -2.25% |
+| Long contribution | +$11,241.35 |
+| Short contribution | +$8,782.14 |
+| Closed trade rows reviewed | 67 |
+
+### Diagnostic Takeaways
+
+- 14 of 18 reported months were profitable in this private Python snapshot.
+- Best month reviewed: April 2026, approximately +$5,927.
+- Weakest month reviewed: January 2026, approximately -$1,127.
+- Partial exits and runner exits were both meaningful contributors.
+- Daily max-loss exits remained a risk warning category, even when total performance was positive.
+- Entry timing, weekday behavior, and worst-trade review were used as diagnostics rather than standalone trading rules.
+
+## Exit-Quality Summary
+
+The private Python diagnostic export showed the value of separating exits by purpose:
+
+| Exit Category | Closed Rows | Aggregate PnL |
+|---|---:|---:|
+| Partial profit exits | 28 | +$7,817.67 |
+| Runner exits | 10 | +$7,675.00 |
+| Stop / trailing exits | 16 | +$4,007.57 |
+| Daily max-loss exits | 3 | -$2,473.00 |
+
+This helped confirm that the research should continue focusing on preventing full-position losses while preserving partial-profit and runner behavior.
 
 ## Key Findings
 
