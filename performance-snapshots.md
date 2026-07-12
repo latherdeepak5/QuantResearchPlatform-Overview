@@ -2,6 +2,40 @@
 
 This page records high-level public research snapshots. These are not trading recommendations and do not include exact strategy logic.
 
+## Snapshot: Combined MES One-Position Python Research
+
+This private Python simulation combined the selective MES pullback research path with an opening-range research path, then replayed both through a one-position-at-a-time account view. The result was an unusually strong historical research snapshot, but it remains a simulation and is not live performance.
+
+| Field | Value |
+|---|---:|
+| Instrument | MES |
+| Timeframe reviewed | 15-minute futures bars |
+| Account view | Combined one-position-at-a-time |
+| Accepted positions | 244 |
+| Win rate | 61.48% |
+| Net simulated PnL | +$114,173.14 |
+| Average PnL per position | +$467.92 |
+| Profit factor | 2.53 |
+| Max drawdown | -2.51% |
+
+### Asset And System Contribution Snapshot
+
+| Asset / System View | Positions | Win Rate | Net Simulated PnL | Profit Factor |
+|---|---:|---:|---:|---:|
+| MES combined one-position view | 244 | 61.48% | +$114,173.14 | 2.53 |
+| MES opening-range contribution inside combined view | 203 | 58.62% | +$96,515.00 | 2.41 |
+| MES pullback contribution inside combined view | 41 | 75.61% | +$17,658.14 | 3.83 |
+
+### Yearly Combined Snapshot
+
+| Year | Accepted Positions | Win Rate | Net Simulated PnL | Profit Factor |
+|---|---:|---:|---:|---:|
+| 2024 | 39 | 64.10% | +$14,177.64 | 2.58 |
+| 2025 | 133 | 60.15% | +$56,954.35 | 2.39 |
+| 2026 | 72 | 62.50% | +$43,041.15 | 2.77 |
+
+![Combined Strategy Snapshot](assets/combined-strategy-snapshot.svg)
+
 ## Snapshot: MES Deep-Test Review, 2020-2026
 
 | Field | Value |
@@ -76,6 +110,7 @@ This page records high-level public research snapshots. These are not trading re
 - Python diagnostics are used to understand behavior; TradingView deep tests are used as a separate validation layer.
 - Daily decision matrices are used to review both trade days and no-trade days.
 - Paper-trading monitoring is treated as a validation step, not proof of live readiness.
+- The combined one-position snapshot is considered exceptional historically, but it must still pass broker-fed alert monitoring before any order-routing decision.
 
 ## What These Snapshots Do Not Show
 

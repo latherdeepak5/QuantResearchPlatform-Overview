@@ -8,12 +8,15 @@ This log records high-level research milestones. It intentionally avoids exact i
 
 Extended the private research workflow from standalone backtesting into a combined monitor-only structure. The private project now evaluates both the existing pullback research path and an opening-range research path, then applies a one-position-at-a-time account view so overlapping ideas can be reviewed without double-counting exposure.
 
+The latest private Python combined snapshot was exceptional for the reviewed sample: 244 accepted positions, approximately 61.48% win rate, approximately +$114k simulated net PnL, 2.53 profit factor, and approximately -2.51% max drawdown. This result is being treated as a high-value research milestone, not as live-trading proof.
+
 High-level purpose:
 
 - Preserve the selective pullback system as the core research setup.
 - Track an additional opening-range behavior separately enough to review its contribution.
 - Avoid holding multiple overlapping research positions at the same time in the combined view.
 - Compare private Python results with chart-platform historical testing where fill assumptions may differ.
+- Track asset/system contribution so the pullback and opening-range components can be reviewed separately.
 
 ### Broker-Fed Alert Readiness
 

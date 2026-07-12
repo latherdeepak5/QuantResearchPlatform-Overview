@@ -13,6 +13,7 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Compare broker-fed paper alerts with TradingView and private Python diagnostics
 - Validate combined one-position behavior during live market monitoring
 - Track alert timing, missed signals, duplicate signals, and broker-data differences
+- Track whether the exceptional combined Python snapshot remains stable in broker-fed paper monitoring
 - Keep broker order routing disabled until monitor-only alerts are stable
 
 ## Medium-Term Research

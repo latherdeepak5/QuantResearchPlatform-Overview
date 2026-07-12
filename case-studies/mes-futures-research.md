@@ -105,6 +105,27 @@ This is useful because:
 
 The combined view is still under validation and does not imply production readiness.
 
+### Combined Research Snapshot
+
+The latest private Python combined simulation produced an unusually strong historical snapshot:
+
+| Metric | Snapshot |
+|---|---:|
+| Accepted positions | 244 |
+| Win rate | 61.48% |
+| Net simulated PnL | +$114,173.14 |
+| Profit factor | 2.53 |
+| Max drawdown | -2.51% |
+
+Asset/system contribution in the combined view:
+
+| Asset / System View | Positions | Net Simulated PnL |
+|---|---:|---:|
+| MES opening-range contribution | 203 | +$96,515.00 |
+| MES pullback contribution | 41 | +$17,658.14 |
+
+This was one of the strongest research snapshots so far. The next question is not whether the backtest looks attractive, but whether broker-fed paper alerts preserve the same timing and risk behavior.
+
 ## Exit-Quality Summary
 
 The private Python diagnostic export showed the value of separating exits by purpose:

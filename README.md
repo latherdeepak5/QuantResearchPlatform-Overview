@@ -20,6 +20,8 @@ The implementation code, Pine scripts, datasets, private research notebooks, and
 
 ![Python Diagnostics Snapshot](assets/python-diagnostics-snapshot.svg)
 
+![Combined Strategy Snapshot](assets/combined-strategy-snapshot.svg)
+
 ## Purpose
 
 The project tracks high-level research progress for a futures trading research platform, including:
@@ -68,6 +70,8 @@ These findings are still under active validation and may change as more data is 
 ## Latest Milestone
 
 On July 12, 2026, the private implementation added a monitor-only broker workflow that can evaluate the current MES research stack, combine accepted candidates into a single-position account view, and send phone alerts through Telegram. Order routing remains disabled by default.
+
+The latest private Python combined-strategy simulation produced an unusually strong historical research snapshot: 244 accepted positions, approximately 61.48% win rate, approximately +$114,173 simulated net PnL, 2.53 profit factor, and approximately -2.51% max drawdown in the reviewed sample. This is treated as a research milestone, not proof of future live performance.
 
 The related public-safe research note is tracked in:
 
