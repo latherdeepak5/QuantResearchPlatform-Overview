@@ -2,6 +2,55 @@
 
 This log records high-level research milestones. It intentionally avoids exact implementation rules, private code, and proprietary parameter details.
 
+## 2026-07-12
+
+### Combined Strategy Monitoring Milestone
+
+Extended the private research workflow from standalone backtesting into a combined monitor-only structure. The private project now evaluates both the existing pullback research path and an opening-range research path, then applies a one-position-at-a-time account view so overlapping ideas can be reviewed without double-counting exposure.
+
+High-level purpose:
+
+- Preserve the selective pullback system as the core research setup.
+- Track an additional opening-range behavior separately enough to review its contribution.
+- Avoid holding multiple overlapping research positions at the same time in the combined view.
+- Compare private Python results with chart-platform historical testing where fill assumptions may differ.
+
+### Broker-Fed Alert Readiness
+
+Added the first broker-fed monitoring path in the private implementation.
+
+Current public-safe scope:
+
+- Connect to a broker desktop application or gateway once login is available.
+- Fetch broker-sourced 15-minute futures bars.
+- Run private Python diagnostics and signal evaluation.
+- Produce entry, partial-exit, and final-exit alerts.
+- Keep order routing disabled by default while signal parity is reviewed.
+
+This remains a research and paper-monitoring milestone. It is not live trading.
+
+### Phone Notification Test
+
+Telegram phone alerts were configured and tested successfully through a standalone sample alert. This allows notification plumbing to be verified before broker connectivity or trade automation is enabled.
+
+### Roadblocks And Fixes
+
+Main blockers encountered:
+
+- Broker Gateway login was not yet stable.
+- Chart-platform strategy results differed materially from private Python research results.
+- Telegram chat-id discovery required a specific API endpoint format.
+- Terminal environment syntax differed between PowerShell and Git Bash.
+- Secrets needed to be kept out of repository documentation.
+
+How they were handled:
+
+- Continued development in alert-only mode while delaying broker login troubleshooting.
+- Treated private Python monitoring as the execution reference for the next paper-testing phase.
+- Added safer setup notes for Telegram test alerts.
+- Added placeholder environment examples instead of real secrets.
+- Documented the full end-to-end flow and today's blockers in the private implementation repository.
+
 ## 2026-07-10
 
 ### Explainable Trade Review Layer

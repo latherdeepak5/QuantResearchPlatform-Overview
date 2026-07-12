@@ -30,6 +30,7 @@ The project tracks high-level research progress for a futures trading research p
 - TradingView deep-test observations
 - Explainable trade-decision diagnostics
 - Paper-trading readiness milestones
+- Broker-fed alerting milestones
 - Future improvement ideas
 
 This repository is meant for visibility and communication only. It is not the working source-code repository.
@@ -39,12 +40,14 @@ This repository is meant for visibility and communication only. It is not the wo
 The current research is focused on Micro E-mini S&P 500 futures (`MES`) trend-pullback behavior, with special attention to:
 
 - Avoiding entries that chase price too far from the EMA pullback zone
+- Studying a combined one-position workflow for selective pullback and opening-range behavior
 - Improving partial profit-taking behavior
 - Keeping scaled runners alive when trend conditions continue
 - Reducing large daily-loss events
 - Comparing Python backtests with TradingView deep-test exports
 - Separating strong entry windows from weak entry windows
 - Building a journal-style review process for every trade and every no-trade day
+- Preparing broker-fed paper monitoring with phone alerts before any order routing
 
 ## Current High-Level Findings
 
@@ -57,8 +60,20 @@ Recent research suggests the strategy behaves better when:
 - Daily max-loss exits are treated as a warning sign, not a preferred exit style
 - Daily checklists make it easier to separate valid no-trade days from missed opportunities
 - Paper-trading infrastructure should begin in monitor-only mode before any automated order routing
+- Python-based monitoring is the preferred execution reference when chart-platform historical fill modeling materially differs from private backtest assumptions
+- Phone notifications can now be tested independently from broker order routing, which reduces integration risk
 
 These findings are still under active validation and may change as more data is tested.
+
+## Latest Milestone
+
+On July 12, 2026, the private implementation added a monitor-only broker workflow that can evaluate the current MES research stack, combine accepted candidates into a single-position account view, and send phone alerts through Telegram. Order routing remains disabled by default.
+
+The related public-safe research note is tracked in:
+
+```text
+research-log.md
+```
 
 ## What Is Not Included
 

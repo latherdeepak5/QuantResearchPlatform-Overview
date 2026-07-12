@@ -10,7 +10,10 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Compare results using different EMA-distance tolerances
 - Separate long-side and short-side parameter reviews
 - Review daily decision matrices to separate valid no-trade days from overly restrictive filters
-- Compare broker-fed paper signals with TradingView and private Python diagnostics
+- Compare broker-fed paper alerts with TradingView and private Python diagnostics
+- Validate combined one-position behavior during live market monitoring
+- Track alert timing, missed signals, duplicate signals, and broker-data differences
+- Keep broker order routing disabled until monitor-only alerts are stable
 
 ## Medium-Term Research
 
@@ -21,6 +24,7 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Build clearer reporting around position-level drawdown
 - Maintain a journal-style review process for entry quality, exit quality, and mistake tags
 - Expand paper-trading monitoring before enabling any automated paper execution
+- Add paper order-routing only after alerts, fills, and risk controls are reviewed in monitor-only mode
 
 ## Longer-Term Research
 
@@ -30,6 +34,7 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Build a cleaner public reporting layer that shows results without exposing private logic
 - Document research decisions as versioned public notes
 - Evaluate whether broker-paper results remain aligned before considering limited live testing
+- Compare the same research framework across other futures and timeframes
 
 ## Public Repository Goals
 

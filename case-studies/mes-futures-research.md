@@ -20,6 +20,7 @@ Early versions of the research showed a common issue:
 - Some short-entry windows created repeated drawdown clusters.
 - Full positions and scaled runner positions needed different exit behavior.
 - Daily max-loss exits were protecting the account, but repeated occurrences indicated preventable trade-quality issues.
+- Chart-platform historical fill assumptions sometimes differed from private Python research assumptions.
 
 ## Analysis Process
 
@@ -49,6 +50,8 @@ The research tested several non-code-level ideas:
 - Letting reduced-size runners continue when trend conditions remained favorable
 - Avoiding uncontrolled full-position exposure late in the session
 - Reviewing whether daily max-loss exits were caused by specific repeatable patterns
+- Testing whether a separate opening-range idea could be tracked without disrupting the core pullback setup
+- Preparing monitor-only broker alerts before considering any automated paper order placement
 
 ## Representative TradingView Research Snapshot
 
@@ -89,6 +92,19 @@ A private Python backtest snapshot from September 2024 through July 2026 was use
 - Entry timing, weekday behavior, and worst-trade review were used as diagnostics rather than standalone trading rules.
 - No-trade days are now reviewed through a daily decision matrix to determine which filters blocked activity.
 
+## Combined Monitoring Update
+
+The private project now includes a combined one-position research view. At a high level, it compares selective pullback candidates and opening-range candidates, then accepts only one active position at a time in the combined account view.
+
+This is useful because:
+
+- It avoids over-counting overlapping opportunities.
+- It separates pullback contribution from opening-range contribution.
+- It helps explain why a candidate was accepted or blocked.
+- It prepares the strategy for broker-fed paper monitoring where only one active research position should be tracked at a time.
+
+The combined view is still under validation and does not imply production readiness.
+
 ## Exit-Quality Summary
 
 The private Python diagnostic export showed the value of separating exits by purpose:
@@ -111,6 +127,8 @@ This helped confirm that the research should continue focusing on preventing ful
 - Daily max-loss events remained the largest warning category and require continued research.
 - Explainable daily diagnostics improved the review process by making no-trade days auditable.
 - Paper-trading preparation has begun in signal-monitoring mode before any automated execution.
+- Phone-alert plumbing has been tested separately from order routing.
+- Broker-fed monitoring is being treated as a staged validation process: alerts first, paper orders later, live trading only after extended review.
 
 ## Current Interpretation
 
@@ -124,6 +142,7 @@ The strategy appears more stable when treated as a selective research system wit
 - Does similar behavior appear in MNQ or other futures markets?
 - Which no-trade days were correctly filtered, and which were missed opportunities?
 - Do paper-trading signals remain aligned with private Python and TradingView review outputs?
+- Do broker-fed alerts arrive early and clearly enough for practical paper-trading review?
 
 ## Confidentiality Note
 
