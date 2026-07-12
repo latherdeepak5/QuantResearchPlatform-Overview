@@ -11,28 +11,28 @@ This private Python simulation combined the selective MES pullback research path
 | Instrument | MES |
 | Timeframe reviewed | 15-minute futures bars |
 | Account view | Combined one-position-at-a-time |
-| Accepted positions | 244 |
-| Win rate | 61.48% |
-| Net simulated PnL | +$114,173.14 |
-| Average PnL per position | +$467.92 |
-| Profit factor | 2.53 |
-| Max drawdown | -2.51% |
+| Accepted positions | 227 |
+| Win rate | 64.76% |
+| Net simulated PnL | +$124,261.64 |
+| Average PnL per position | +$547.41 |
+| Profit factor | 2.98 |
+| Max drawdown | -2.48% |
 
 ### Asset And System Contribution Snapshot
 
 | Asset / System View | Positions | Win Rate | Net Simulated PnL | Profit Factor |
 |---|---:|---:|---:|---:|
-| MES combined one-position view | 244 | 61.48% | +$114,173.14 | 2.53 |
-| MES opening-range contribution inside combined view | 203 | 58.62% | +$96,515.00 | 2.41 |
-| MES pullback contribution inside combined view | 41 | 75.61% | +$17,658.14 | 3.83 |
+| MES combined one-position view | 227 | 64.76% | +$124,261.64 | 2.98 |
+| MES timing-filtered opening-range contribution | 187 | 62.03% | +$105,822.50 | 2.85 |
+| MES pullback contribution inside combined view | 40 | 77.50% | +$18,439.14 | 4.38 |
 
 ### Yearly Combined Snapshot
 
 | Year | Accepted Positions | Win Rate | Net Simulated PnL | Profit Factor |
 |---|---:|---:|---:|---:|
-| 2024 | 39 | 64.10% | +$14,177.64 | 2.58 |
-| 2025 | 133 | 60.15% | +$56,954.35 | 2.39 |
-| 2026 | 72 | 62.50% | +$43,041.15 | 2.77 |
+| 2024 | 33 | 66.67% | +$13,622.64 | 2.92 |
+| 2025 | 128 | 62.50% | +$61,977.85 | 2.72 |
+| 2026 | 66 | 68.18% | +$48,661.15 | 3.49 |
 
 ![Combined Strategy Snapshot](assets/combined-strategy-snapshot.svg)
 

@@ -64,6 +64,7 @@ Recent research suggests the strategy behaves better when:
 - Paper-trading infrastructure should begin in monitor-only mode before any automated order routing
 - Python-based monitoring is the preferred execution reference when chart-platform historical fill modeling materially differs from private backtest assumptions
 - Phone notifications can now be tested independently from broker order routing, which reduces integration risk
+- Opening-range entries improve when weaker time windows are excluded and the remaining windows are validated across multiple years
 
 These findings are still under active validation and may change as more data is tested.
 
@@ -71,7 +72,7 @@ These findings are still under active validation and may change as more data is 
 
 On July 12, 2026, the private implementation added a monitor-only broker workflow that can evaluate the current MES research stack, combine accepted candidates into a single-position account view, and send phone alerts through Telegram. Order routing remains disabled by default.
 
-The latest private Python combined-strategy simulation produced an unusually strong historical research snapshot: 244 accepted positions, approximately 61.48% win rate, approximately +$114,173 simulated net PnL, 2.53 profit factor, and approximately -2.51% max drawdown in the reviewed sample. This is treated as a research milestone, not proof of future live performance.
+The latest private Python combined-strategy simulation, including the timing-filtered opening-range component, produced an unusually strong historical research snapshot: 227 accepted positions, approximately 64.76% win rate, approximately +$124,262 simulated net PnL, 2.98 profit factor, and approximately -2.48% max drawdown in the reviewed sample. This is treated as a research milestone, not proof of future live performance.
 
 The related public-safe research note is tracked in:
 
