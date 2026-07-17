@@ -78,6 +78,8 @@ Operational controls now include paper-account validation, real-time-data valida
 
 The latest MNQ research also demonstrated disciplined rejection of a plausible idea. A delayed-confirmation entry variant produced lower profit factor, lower simulated PnL, and higher drawdown than the original same-bar confirmation baseline, so it was removed from both the private Python and chart-validation implementations.
 
+The broker-monitoring scope was also extended to evaluate an optional MGC paper-monitoring path with smaller contract sizing and partial-runner management. This is intentionally gated behind an explicit enable flag because early transfer results were positive but not yet strong enough to treat as a default automated workflow.
+
 The latest private Python combined-strategy simulation, including the timing-filtered opening-range component, produced an unusually strong historical research snapshot: 227 accepted positions, approximately 64.76% win rate, approximately +$124,262 simulated net PnL, 2.98 profit factor, and approximately -2.48% max drawdown in the reviewed sample. This is treated as a research milestone, not proof of future live performance.
 
 The related public-safe research note is tracked in:

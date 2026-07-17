@@ -28,6 +28,8 @@ A delayed-confirmation variant initially appeared reasonable but failed the full
 
 Organized normalized local research inputs for MES, MNQ, MGC, MYM, BTC, and ETH by asset, symbol, and timeframe. Raw datasets remain excluded from public repositories. Added MGC structure/liquidity experiments and a larger automated regression suite while preserving accepted MES behavior.
 
+An optional MGC broker-monitoring path was also evaluated with reduced sizing and partial-runner handling. It remains explicitly gated in the private workflow because the early transfer results are positive but not yet robust enough to become a default paper-execution stream.
+
 ### Verification
 
 - Real-time MES broker quotes and current 15-minute history were confirmed.
