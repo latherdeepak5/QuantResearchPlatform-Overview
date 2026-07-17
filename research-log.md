@@ -2,6 +2,38 @@
 
 This log records high-level research milestones. It intentionally avoids exact implementation rules, private code, and proprietary parameter details.
 
+## 2026-07-17
+
+### Guarded Paper-Execution Milestone
+
+Advanced the private workflow from monitor-only broker alerts to guarded automatic execution in an IBKR paper account. Real-time broker data was verified independently before paper routing was enabled.
+
+Public-safe controls now include:
+
+- Paper-account-only validation; live-account routing remains blocked.
+- Real-time market-data validation before orders are permitted.
+- Contract-size caps and position-aware exit sizing.
+- Persistent event identifiers and broker order references for duplicate protection.
+- Separate strategy ownership so two MNQ systems cannot manage one position.
+- A single-instance process lock after duplicate monitor processes were detected during operations.
+- Quiet routine polling with visible fills, failures, Telegram alerts, and durable audit records.
+
+### MNQ Market-Structure Research
+
+Expanded the research platform beyond MES into MNQ opening-range, Supertrend/EMA, and market-structure studies. The accepted structure model requires directional agreement between independent conditions before a retracement entry is eligible, and it exits when the structure reverses.
+
+A delayed-confirmation variant initially appeared reasonable but failed the full private-history comparison. It generated 50 additional trades with a 28% win rate, negative simulated net PnL, and profit factor below 1.0. The branch was removed from both private Python and chart-validation code. Recording this rejection prevents an attractive but weaker rule from being reintroduced later.
+
+### Broader Research Library
+
+Organized normalized local research inputs for MES, MNQ, MGC, MYM, BTC, and ETH by asset, symbol, and timeframe. Raw datasets remain excluded from public repositories. Added MGC structure/liquidity experiments and a larger automated regression suite while preserving accepted MES behavior.
+
+### Verification
+
+- Real-time MES broker quotes and current 15-minute history were confirmed.
+- The complete private automated suite passed 37 tests before the milestone push.
+- Raw data, credentials, account identifiers, generated reports, and executable private logic remain outside this overview repository.
+
 ## 2026-07-12
 
 ### Combined Strategy Monitoring Milestone

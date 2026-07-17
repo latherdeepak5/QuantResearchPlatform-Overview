@@ -7,6 +7,7 @@ The implementation code, Pine scripts, datasets, private research notebooks, and
 ## Quick Links
 
 - [MES Futures Research Case Study](case-studies/mes-futures-research.md)
+- [MNQ Structure Research Case Study](case-studies/mnq-structure-research.md)
 - [Performance Snapshots](performance-snapshots.md)
 - [Validation Methodology](validation-methodology.md)
 - [Risk Principles](risk-principles.md)
@@ -39,7 +40,7 @@ This repository is meant for visibility and communication only. It is not the wo
 
 ## Current Research Focus
 
-The current research is focused on Micro E-mini S&P 500 futures (`MES`) trend-pullback behavior, with special attention to:
+The current research covers Micro E-mini S&P 500 (`MES`) and Micro E-mini Nasdaq-100 (`MNQ`) futures, with special attention to:
 
 - Avoiding entries that chase price too far from the EMA pullback zone
 - Studying a combined one-position workflow for selective pullback and opening-range behavior
@@ -49,7 +50,8 @@ The current research is focused on Micro E-mini S&P 500 futures (`MES`) trend-pu
 - Comparing Python backtests with TradingView deep-test exports
 - Separating strong entry windows from weak entry windows
 - Building a journal-style review process for every trade and every no-trade day
-- Preparing broker-fed paper monitoring with phone alerts before any order routing
+- Comparing trend-pullback, opening-range, and market-structure behaviors without mixing ownership of the same broker position
+- Operating a guarded broker-fed paper workflow with phone alerts before considering any live execution
 
 ## Current High-Level Findings
 
@@ -61,7 +63,7 @@ Recent research suggests the strategy behaves better when:
 - Scaled runner contracts are allowed to continue after partial profits
 - Daily max-loss exits are treated as a warning sign, not a preferred exit style
 - Daily checklists make it easier to separate valid no-trade days from missed opportunities
-- Paper-trading infrastructure should begin in monitor-only mode before any automated order routing
+- Automated execution should remain restricted to a paper account with explicit account, data, size, position, duplicate-event, and single-process safeguards
 - Python-based monitoring is the preferred execution reference when chart-platform historical fill modeling materially differs from private backtest assumptions
 - Phone notifications can now be tested independently from broker order routing, which reduces integration risk
 - Opening-range entries improve when weaker time windows are excluded and the remaining windows are validated across multiple years
@@ -70,7 +72,11 @@ These findings are still under active validation and may change as more data is 
 
 ## Latest Milestone
 
-On July 12, 2026, the private implementation added a monitor-only broker workflow that can evaluate the current MES research stack, combine accepted candidates into a single-position account view, and send phone alerts through Telegram. Order routing remains disabled by default.
+On July 17, 2026, the private implementation advanced from broker-fed alerts to guarded IBKR paper execution. The workflow now evaluates MES and MNQ strategies from real-time broker data, sends Telegram lifecycle notifications, and routes only explicitly selected strategy events to a paper account. Live-account execution remains blocked.
+
+Operational controls now include paper-account validation, real-time-data validation, contract-size caps, position-aware exits, persistent event and order references, and a single-instance process lock. The terminal remains quiet during routine polling while fills and failures stay visible.
+
+The latest MNQ research also demonstrated disciplined rejection of a plausible idea. A delayed-confirmation entry variant produced lower profit factor, lower simulated PnL, and higher drawdown than the original same-bar confirmation baseline, so it was removed from both the private Python and chart-validation implementations.
 
 The latest private Python combined-strategy simulation, including the timing-filtered opening-range component, produced an unusually strong historical research snapshot: 227 accepted positions, approximately 64.76% win rate, approximately +$124,262 simulated net PnL, 2.98 profit factor, and approximately -2.48% max drawdown in the reviewed sample. This is treated as a research milestone, not proof of future live performance.
 

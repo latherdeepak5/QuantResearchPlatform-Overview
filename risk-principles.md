@@ -24,6 +24,14 @@ Long and short trades often behave differently. They should be analyzed separate
 
 Runner continuation is useful only when risk has already been reduced. Runners should still have clearly defined exit logic such as trend deterioration, EMA behavior, ATR/trailing stop, or other risk controls.
 
+### Treat Execution Safety As Strategy Risk
+
+Broker automation introduces risks that do not appear in a backtest. Paper execution therefore requires account validation, real-time data checks, size limits, position-aware exits, duplicate-event protection, and a single running monitor. Live-account routing remains outside the current project scope.
+
+### Reject Plausible Ideas When The Evidence Weakens
+
+A change is not accepted merely because it creates more trades or looks sensible on a chart. A recent MNQ delayed-confirmation variant reduced profit factor and increased drawdown, so it was removed even though it expanded opportunity count.
+
 ## Practical Review Questions
 
 Before accepting a strategy change, the research asks:

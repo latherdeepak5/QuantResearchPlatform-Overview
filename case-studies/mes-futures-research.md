@@ -51,7 +51,7 @@ The research tested several non-code-level ideas:
 - Avoiding uncontrolled full-position exposure late in the session
 - Reviewing whether daily max-loss exits were caused by specific repeatable patterns
 - Testing whether a separate opening-range idea could be tracked without disrupting the core pullback setup
-- Preparing monitor-only broker alerts before considering any automated paper order placement
+- Preparing broker alerts, then guarded paper routing, before considering any live-account work
 
 ## Representative TradingView Research Snapshot
 
@@ -103,7 +103,7 @@ This is useful because:
 - It helps explain why a candidate was accepted or blocked.
 - It prepares the strategy for broker-fed paper monitoring where only one active research position should be tracked at a time.
 
-The combined view is still under validation and does not imply production readiness.
+The combined view is now being observed through guarded broker-paper execution and still does not imply production readiness.
 
 ### Combined Research Snapshot
 
@@ -149,9 +149,9 @@ This helped confirm that the research should continue focusing on preventing ful
 - Allowing all positions to continue indefinitely increased risk; allowing only reduced-size runners to continue was cleaner.
 - Daily max-loss events remained the largest warning category and require continued research.
 - Explainable daily diagnostics improved the review process by making no-trade days auditable.
-- Paper-trading preparation has begun in signal-monitoring mode before any automated execution.
+- Paper execution is now guarded by account, market-data, size, position, duplicate-event, and single-process controls.
 - Phone-alert plumbing has been tested separately from order routing.
-- Broker-fed monitoring is being treated as a staged validation process: alerts first, paper orders later, live trading only after extended review.
+- Broker validation remains staged: alerts first, guarded paper orders second, and no live-account routing without extended evidence and a separate decision.
 
 ## Current Interpretation
 

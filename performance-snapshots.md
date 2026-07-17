@@ -2,6 +2,18 @@
 
 This page records high-level public research snapshots. These are not trading recommendations and do not include exact strategy logic.
 
+## Snapshot: MNQ Structure Hypothesis Comparison
+
+This private comparison tested whether retaining an earlier structure signal until a later confirmation would improve opportunity capture. It did not. The original stricter confirmation remained superior and the delayed branch was rejected.
+
+| Research view | Trades | Win rate | Net simulated PnL | Profit factor | Max drawdown |
+|---|---:|---:|---:|---:|---:|
+| Original confirmation baseline | 520 | 36.54% | +$109,217 | 1.39 | -$24,787.50 |
+| Delayed-confirmation branch | 50 | 28.00% | -$6,095 | 0.73 | -$10,245.00 |
+| Combined experimental result | 570 | 35.79% | +$103,122 | 1.34 | -$26,785.75 |
+
+The reviewed sample used local MNQ 15-minute data from September 2024 through July 2026, five micro contracts, and estimated commissions without slippage. These are historical simulations, not paper or live returns.
+
 ## Snapshot: Combined MES One-Position Python Research
 
 This private Python simulation combined the selective MES pullback research path with an opening-range research path, then replayed both through a one-position-at-a-time account view. The result was an unusually strong historical research snapshot, but it remains a simulation and is not live performance.
@@ -109,7 +121,7 @@ This private Python simulation combined the selective MES pullback research path
 - Long and short systems are reviewed separately because they often behave differently.
 - Python diagnostics are used to understand behavior; TradingView deep tests are used as a separate validation layer.
 - Daily decision matrices are used to review both trade days and no-trade days.
-- Paper-trading monitoring is treated as a validation step, not proof of live readiness.
+- Guarded paper execution is treated as a validation step, not proof of live readiness.
 - The combined one-position snapshot is considered exceptional historically, but it must still pass broker-fed alert monitoring before any order-routing decision.
 
 ## What These Snapshots Do Not Show

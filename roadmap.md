@@ -14,18 +14,20 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Validate combined one-position behavior during live market monitoring
 - Track alert timing, missed signals, duplicate signals, and broker-data differences
 - Track whether the exceptional combined Python snapshot remains stable in broker-fed paper monitoring
-- Keep broker order routing disabled until monitor-only alerts are stable
+- Reconcile every broker-paper fill against the expected private strategy event
+- Track paper slippage, rejected orders, missed exits, and reconnect behavior
+- Validate that single-strategy MNQ ownership remains reliable across long-running sessions
 
 ## Medium-Term Research
 
-- Run similar analysis on MNQ and compare behavior against MES
+- Continue comparing MNQ behavior against MES without sharing one parameter set
 - Review volatility-regime sensitivity
 - Study monthly and yearly consistency
 - Track runner contribution versus partial-exit contribution
 - Build clearer reporting around position-level drawdown
 - Maintain a journal-style review process for entry quality, exit quality, and mistake tags
-- Expand paper-trading monitoring before enabling any automated paper execution
-- Add paper order-routing only after alerts, fills, and risk controls are reviewed in monitor-only mode
+- Accumulate several months of paper-execution evidence before changing any account scope
+- Evaluate server-side protective orders only after paper lifecycle reconciliation is stable
 
 ## Longer-Term Research
 
