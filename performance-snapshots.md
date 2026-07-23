@@ -124,6 +124,43 @@ This private Python simulation combined the selective MES pullback research path
 - Guarded paper execution is treated as a validation step, not proof of live readiness.
 - The combined one-position snapshot is considered exceptional historically, but it must still pass broker-fed alert monitoring before any order-routing decision.
 
+## Snapshot: Multi-Asset Research Contribution, 2024-2026
+
+These are independent private simulations. They are shown as research sleeves
+and must not be summed into a single portfolio return because capital,
+correlation, overlapping exposure, and execution assumptions have not yet been
+modeled in one unified portfolio backtest.
+
+| Research sleeve | Retained view | Trades / positions | Net simulated P&L | Profit factor | Drawdown measure |
+|---|---|---:|---:|---:|---:|
+| MES | Combined one-position pullback + ORB | 227 | +$124,261.64 | 2.98 | -2.48% |
+| MNQ | 0.5R step trail after 2R | 521 | +$87,380.90 | 1.395 | -$11,643.00 |
+| MGC | Confirmation-aware opposite-structure exit | 436 | +$120,957.50 | 1.514 | -$20,428.30 |
+
+### Incremental Findings
+
+| Finding | Comparison | Simulated net-P&L change | Profit-factor change | Risk interpretation |
+|---|---|---:|---:|---|
+| MNQ 0.5R step management | Versus fixed 2R partial | +$7,754.40 | 1.360 to 1.395 | Return-to-drawdown improved from 7.211 to 7.505; absolute drawdown increased by about $600 |
+| MGC confirmation-aware exit | Versus immediate opposite CHoCH | +$31,191.80 | 1.370 to 1.514 | Return-to-drawdown improved from 4.517 to 5.921; absolute drawdown increased by about $555 |
+
+![Multi-Asset Research Contribution](assets/multi-asset-research-snapshot.svg)
+
+### Portfolio Interpretation
+
+- MES remains the strongest risk-adjusted historical sleeve in the current
+  public snapshots.
+- MNQ adds a separate Nasdaq structure path; the retained management change
+  improved simulated return efficiency without reducing absolute drawdown.
+- MGC adds metals exposure and responded positively to confirmation-aware exit
+  management.
+- Broker-held stops, lifecycle reconciliation, and the private dashboard are
+  operational improvements. They are designed to reduce execution and audit
+  risk, not to increase historical P&L.
+- A true portfolio-growth claim requires a future unified simulation with shared
+  starting capital, margin constraints, simultaneous-position rules,
+  correlation, slippage, and broker-paper fills.
+
 ## What These Snapshots Do Not Show
 
 These snapshots do not include:

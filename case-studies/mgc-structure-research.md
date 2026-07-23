@@ -42,6 +42,12 @@ new same-direction continuation event can invalidate that pending exit.
 
 This is still under paper validation and may change with a larger sample.
 
+In the saved private comparison, the confirmation-aware exit increased
+simulated net P&L from approximately $89.8k to approximately $121.0k and raised
+profit factor from 1.37 to 1.514. Return-to-drawdown improved, although absolute
+drawdown was approximately $555 larger. The result supports continued paper
+validation rather than a claim that every risk measure improved.
+
 ## Rejected Transfers
 
 - A more aggressive retracement setting was tested but did not replace the

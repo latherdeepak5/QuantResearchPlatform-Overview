@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-label="Multi-asset futures research contribution snapshot">
+  <rect width="1100" height="650" fill="#0f172a"/>
+  <rect x="34" y="34" width="1032" height="582" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="64" y="84" fill="#e5e7eb" font-size="34" font-weight="700">Multi-Asset Research Contribution</text>
+    <text x="64" y="120" fill="#94a3b8" font-size="18">Independent historical simulations • Sep 2024 - Jul 2026 • results are not additive</text>
+
+    <rect x="64" y="154" width="300" height="244" rx="10" fill="#172033" stroke="#2563eb" stroke-width="2"/>
+    <text x="88" y="192" fill="#60a5fa" font-size="18" font-weight="700">MES COMBINED SLEEVE</text>
+    <text x="88" y="236" fill="#22c55e" font-size="32" font-weight="700">+$124,261.64</text>
+    <text x="88" y="264" fill="#94a3b8" font-size="15">Net simulated P&amp;L</text>
+    <line x1="88" y1="286" x2="340" y2="286" stroke="#334155"/>
+    <text x="88" y="320" fill="#e5e7eb" font-size="18">Profit factor</text>
+    <text x="316" y="320" text-anchor="end" fill="#facc15" font-size="20" font-weight="700">2.98</text>
+    <text x="88" y="350" fill="#e5e7eb" font-size="18">Max drawdown</text>
+    <text x="316" y="350" text-anchor="end" fill="#fb7185" font-size="20" font-weight="700">-2.48%</text>
+    <text x="88" y="380" fill="#94a3b8" font-size="14">Pullback + timing-filtered ORB</text>
+
+    <rect x="400" y="154" width="300" height="244" rx="10" fill="#172033" stroke="#14b8a6" stroke-width="2"/>
+    <text x="424" y="192" fill="#2dd4bf" font-size="18" font-weight="700">MNQ RETAINED MANAGEMENT</text>
+    <text x="424" y="236" fill="#22c55e" font-size="32" font-weight="700">+$87,380.90</text>
+    <text x="424" y="264" fill="#94a3b8" font-size="15">Net simulated P&amp;L</text>
+    <line x1="424" y1="286" x2="676" y2="286" stroke="#334155"/>
+    <text x="424" y="320" fill="#e5e7eb" font-size="18">Profit factor</text>
+    <text x="652" y="320" text-anchor="end" fill="#facc15" font-size="20" font-weight="700">1.395</text>
+    <text x="424" y="350" fill="#e5e7eb" font-size="18">Return / drawdown</text>
+    <text x="652" y="350" text-anchor="end" fill="#38bdf8" font-size="20" font-weight="700">7.505</text>
+    <text x="424" y="380" fill="#94a3b8" font-size="14">+$7.75k vs fixed-2R comparison</text>
+
+    <rect x="736" y="154" width="300" height="244" rx="10" fill="#172033" stroke="#d4a72c" stroke-width="2"/>
+    <text x="760" y="192" fill="#facc15" font-size="18" font-weight="700">MGC RETAINED EXIT</text>
+    <text x="760" y="236" fill="#22c55e" font-size="32" font-weight="700">+$120,957.50</text>
+    <text x="760" y="264" fill="#94a3b8" font-size="15">Net simulated P&amp;L</text>
+    <line x1="760" y1="286" x2="1012" y2="286" stroke="#334155"/>
+    <text x="760" y="320" fill="#e5e7eb" font-size="18">Profit factor</text>
+    <text x="988" y="320" text-anchor="end" fill="#facc15" font-size="20" font-weight="700">1.514</text>
+    <text x="760" y="350" fill="#e5e7eb" font-size="18">Return / drawdown</text>
+    <text x="988" y="350" text-anchor="end" fill="#38bdf8" font-size="20" font-weight="700">5.921</text>
+    <text x="760" y="380" fill="#94a3b8" font-size="14">+$31.19k vs immediate exit</text>
+
+    <rect x="64" y="426" width="972" height="116" rx="10" fill="#151f2e" stroke="#334155"/>
+    <text x="88" y="462" fill="#e5e7eb" font-size="18" font-weight="700">How the findings strengthen the research portfolio</text>
+    <circle cx="94" cy="492" r="5" fill="#60a5fa"/>
+    <text x="110" y="498" fill="#cbd5e1" font-size="16">MES supplies the strongest historical profit factor and lowest percentage drawdown snapshot.</text>
+    <circle cx="94" cy="522" r="5" fill="#2dd4bf"/>
+    <text x="110" y="528" fill="#cbd5e1" font-size="16">MNQ and MGC add distinct index and metals research paths with separately validated management.</text>
+
+    <text x="64" y="578" fill="#64748b" font-size="14">Independent backtests with different assumptions; do not sum as one portfolio return. Operational safeguards improve protection, not backtest P&amp;L.</text>
+    <text x="64" y="600" fill="#64748b" font-size="14">Historical simulations are not financial advice and do not guarantee future performance.</text>
+  </g>
+</svg>

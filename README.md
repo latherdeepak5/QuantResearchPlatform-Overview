@@ -18,11 +18,11 @@ The implementation code, Pine scripts, datasets, private research notebooks, and
 
 ## Visual Snapshot
 
-
-
 ![Python Diagnostics Snapshot](assets/python-diagnostics-snapshot.svg)
 
 ![Combined Strategy Snapshot](assets/combined-strategy-snapshot.svg)
+
+![Multi-Asset Research Contribution](assets/multi-asset-research-snapshot.svg)
 
 ## Purpose
 
@@ -95,6 +95,13 @@ Entries without valid protection are blocked. Dynamic strategy management still
 requires the monitoring computer to remain online.
 
 The complete private automated suite passed 67 tests at this milestone.
+
+The latest public-safe visual separates the three research sleeves instead of
+adding their simulated profits together. This matters because the backtests use
+different assumptions and do not yet represent one capital-constrained
+portfolio. The asset shows where each retained finding improved its own
+historical research path while keeping operational safeguards separate from
+performance claims.
 
 On July 17, 2026, the private implementation advanced from broker-fed alerts to guarded IBKR paper execution. The workflow now evaluates MES and MNQ strategies from real-time broker data, sends Telegram lifecycle notifications, and routes only explicitly selected strategy events to a paper account. Live-account execution remains blocked.
 
