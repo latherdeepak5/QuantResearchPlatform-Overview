@@ -28,6 +28,14 @@ Runner continuation is useful only when risk has already been reduced. Runners s
 
 Broker automation introduces risks that do not appear in a backtest. Paper execution therefore requires account validation, real-time data checks, size limits, position-aware exits, duplicate-event protection, and a single running monitor. Live-account routing remains outside the current project scope.
 
+### Keep Protection At The Broker
+
+An accepted paper entry should not depend entirely on the local Python process
+remaining connected. Routed entries therefore include broker-held emergency
+protection, which is adjusted as the position is reduced and removed after final
+closure. Dynamic management still depends on the monitor, so this protection is
+a safety floor rather than a replacement for operational monitoring.
+
 ### Reject Plausible Ideas When The Evidence Weakens
 
 A change is not accepted merely because it creates more trades or looks sensible on a chart. A recent MNQ delayed-confirmation variant reduced profit factor and increased drawdown, so it was removed even though it expanded opportunity count.

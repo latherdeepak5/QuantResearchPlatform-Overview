@@ -8,6 +8,7 @@ The implementation code, Pine scripts, datasets, private research notebooks, and
 
 - [MES Futures Research Case Study](case-studies/mes-futures-research.md)
 - [MNQ Structure Research Case Study](case-studies/mnq-structure-research.md)
+- [MGC Structure Research Case Study](case-studies/mgc-structure-research.md)
 - [Performance Snapshots](performance-snapshots.md)
 - [Validation Methodology](validation-methodology.md)
 - [Risk Principles](risk-principles.md)
@@ -40,7 +41,7 @@ This repository is meant for visibility and communication only. It is not the wo
 
 ## Current Research Focus
 
-The current research covers Micro E-mini S&P 500 (`MES`) and Micro E-mini Nasdaq-100 (`MNQ`) futures, with special attention to:
+The current research covers Micro E-mini S&P 500 (`MES`), Micro E-mini Nasdaq-100 (`MNQ`), and Micro Gold (`MGC`) futures, with special attention to:
 
 - Avoiding entries that chase price too far from the EMA pullback zone
 - Studying a combined one-position workflow for selective pullback and opening-range behavior
@@ -52,6 +53,8 @@ The current research covers Micro E-mini S&P 500 (`MES`) and Micro E-mini Nasdaq
 - Building a journal-style review process for every trade and every no-trade day
 - Comparing trend-pullback, opening-range, and market-structure behaviors without mixing ownership of the same broker position
 - Operating a guarded broker-fed paper workflow with phone alerts before considering any live execution
+- Maintaining broker-held emergency protection if the local monitor disconnects
+- Reviewing the same entry and exit lifecycle through a private authenticated dashboard
 
 ## Current High-Level Findings
 
@@ -71,6 +74,27 @@ Recent research suggests the strategy behaves better when:
 These findings are still under active validation and may change as more data is tested.
 
 ## Latest Milestone
+
+On July 23, 2026, the private platform added a durable, password-protected signal
+dashboard and broker-held emergency protection for routed paper entries. The
+dashboard reconciles entries, partial exits, final exits, realized P&L, open
+positions, and monitor health from the same structured event stream used by
+Telegram and IBKR.
+
+The MNQ structure workflow retained its smaller partial-plus-runner model and
+the finer of two tested step-trailing alternatives. MGC research added a
+directional moving-average filter, same-direction continuation opportunities,
+and a confirmation-aware opposite-structure exit. More aggressive retracement
+and trend-factor variants were tested and then restored to the earlier baseline
+when the comparison did not justify replacing it.
+
+Every new routed paper entry must now carry a valid initial protective price.
+The private router submits an attached broker-held GTC emergency stop, adjusts
+its quantity after partial exits, and cancels it after the position closes.
+Entries without valid protection are blocked. Dynamic strategy management still
+requires the monitoring computer to remain online.
+
+The complete private automated suite passed 67 tests at this milestone.
 
 On July 17, 2026, the private implementation advanced from broker-fed alerts to guarded IBKR paper execution. The workflow now evaluates MES and MNQ strategies from real-time broker data, sends Telegram lifecycle notifications, and routes only explicitly selected strategy events to a paper account. Live-account execution remains blocked.
 

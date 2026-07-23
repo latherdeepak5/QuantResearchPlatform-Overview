@@ -2,6 +2,57 @@
 
 This log records high-level research milestones. It intentionally avoids exact implementation rules, private code, and proprietary parameter details.
 
+## 2026-07-23
+
+### Unified Paper-Execution Review Layer
+
+The private platform now records the same structured strategy lifecycle across
+IBKR paper routing, Telegram, and a password-protected local dashboard. The
+dashboard tracks open positions, entries, partial exits, final exits, realized
+P&L, and monitor health without publishing private strategy rules or account
+details.
+
+### Broker-Held Emergency Protection
+
+Every routed paper entry must now include an initial protective level. The
+private router submits attached broker-held emergency protection, resizes the
+remaining quantity after partial exits, and cancels the protection after final
+closure. An entry is blocked when a valid protective level is unavailable.
+
+This reduces disconnect risk for an existing broker position. It does not make
+the full strategy independent of the monitoring computer: new signals, dynamic
+management, Telegram, and dashboard updates still require a running process and
+broker session.
+
+### MNQ Management Research
+
+The MNQ structure workflow was extended with partial-plus-runner management and
+compared across several reward thresholds, retracement depths, hard-stop
+assumptions, and step-trailing increments. The finer step-trailing alternative
+was retained. A larger step and deeper entry variants were not promoted when the
+comparison did not improve the accepted balance of return and drawdown.
+
+### MGC Structure And Continuation Research
+
+The MGC transfer study retained smaller position sizing and added:
+
+- Directional moving-average confirmation.
+- Same-direction continuation opportunities.
+- Partial profit-taking with reduced-size runners.
+- A confirmation-aware opposite-structure exit intended to avoid reacting to a
+  single premature reversal marker.
+
+The moving-average condition was also tested on MNQ but remained MGC-specific.
+More aggressive retracement and trend-factor variants were restored to the
+earlier baseline after comparison.
+
+### Verification
+
+- The private code compiled successfully.
+- The private automated suite passed 67 tests.
+- Generated ledgers, credentials, account identifiers, and executable strategy
+  logic remain excluded from this public repository.
+
 ## 2026-07-17
 
 ### Guarded Paper-Execution Milestone
