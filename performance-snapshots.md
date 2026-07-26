@@ -135,7 +135,7 @@ modeled in one unified portfolio backtest.
 |---|---|---:|---:|---:|---:|
 | MES | Combined one-position pullback + ORB | 227 | +$124,261.64 | 2.98 | -2.48% |
 | MNQ | 0.5R step trail after 2R | 521 | +$87,380.90 | 1.395 | -$11,643.00 |
-| MGC | Confirmation-aware opposite-structure exit | 436 | +$120,957.50 | 1.514 | -$20,428.30 |
+| MGC | Risk-managed structure version | 481 | +$141,367.70 | 1.624 | -$14,849.00 |
 
 ### Incremental Findings
 
@@ -143,6 +143,22 @@ modeled in one unified portfolio backtest.
 |---|---|---:|---:|---|
 | MNQ 0.5R step management | Versus fixed 2R partial | +$7,754.40 | 1.360 to 1.395 | Return-to-drawdown improved from 7.211 to 7.505; absolute drawdown increased by about $600 |
 | MGC confirmation-aware exit | Versus immediate opposite CHoCH | +$31,191.80 | 1.370 to 1.514 | Return-to-drawdown improved from 4.517 to 5.921; absolute drawdown increased by about $555 |
+
+## Snapshot: MGC Risk-Management Comparison
+
+The newest MGC comparison tested a 65-point maximum initial-risk distance and a
+protective-stop adjustment to -0.25R after price reaches +1R.
+
+| Scenario | Trades | Win Rate | Net Simulated P&L | Profit Factor | Max Drawdown |
+|---|---:|---:|---:|---:|---:|
+| Structural-stop comparison | 481 | 38.88% | +$147,941.00 | 1.620 | -$13,893.00 |
+| Risk-managed version | 481 | 38.05% | +$141,367.70 | 1.624 | -$14,849.00 |
+
+The change marginally improved profit factor but did not improve standalone MGC
+net return or drawdown. Its benefit was more visible in the unified reference
+portfolio, where simulated net P&L moved from approximately $326.8k to $324.5k
+while max drawdown improved from approximately -$16.8k to -$14.1k. The rule is
+therefore being retained for paper validation as a portfolio-risk tradeoff.
 
 ![Multi-Asset Research Contribution](assets/multi-asset-research-snapshot.svg)
 

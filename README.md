@@ -75,6 +75,24 @@ These findings are still under active validation and may change as more data is 
 
 ## Latest Milestone
 
+On July 26, 2026, the private platform promoted a fourth MGC research version
+with an explicit maximum initial-risk distance and a rule-based protective-stop
+adjustment after the trade first reaches +1R. The original entry stop, current
+protective stop, risk in points and dollars, and stop-management state are now
+shown separately in the private operations dashboard.
+
+The retained rule produced a small historical profit-factor improvement, from
+1.620 to 1.624, while reducing simulated MGC net P&L and slightly increasing
+standalone MGC drawdown. In the unified reference-portfolio replay, aggregate
+drawdown improved from approximately -$16.8k to -$14.1k while simulated net P&L
+declined by approximately $2.3k. This is recorded as a risk-allocation tradeoff,
+not a universal performance improvement.
+
+The private platform now also includes centralized paper-session controls,
+strategy health and routing controls, lifecycle reconciliation, notification
+history, performance analytics, daily reporting, and extended paper-validation
+checks. Live-account routing remains blocked.
+
 On July 23, 2026, the private platform added a durable, password-protected signal
 dashboard and broker-held emergency protection for routed paper entries. The
 dashboard reconciles entries, partial exits, final exits, realized P&L, open
@@ -94,7 +112,7 @@ its quantity after partial exits, and cancels it after the position closes.
 Entries without valid protection are blocked. Dynamic strategy management still
 requires the monitoring computer to remain online.
 
-The complete private automated suite passed 67 tests at this milestone.
+The complete private automated suite now passes 336 tests.
 
 The latest public-safe visual separates the three research sleeves instead of
 adding their simulated profits together. This matters because the backtests use

@@ -28,15 +28,15 @@
     <text x="424" y="380" fill="#94a3b8" font-size="14">+$7.75k vs fixed-2R comparison</text>
 
     <rect x="736" y="154" width="300" height="244" rx="10" fill="#172033" stroke="#d4a72c" stroke-width="2"/>
-    <text x="760" y="192" fill="#facc15" font-size="18" font-weight="700">MGC RETAINED EXIT</text>
-    <text x="760" y="236" fill="#22c55e" font-size="32" font-weight="700">+$120,957.50</text>
+    <text x="760" y="192" fill="#facc15" font-size="18" font-weight="700">MGC RISK-MANAGED VERSION</text>
+    <text x="760" y="236" fill="#22c55e" font-size="32" font-weight="700">+$141,367.70</text>
     <text x="760" y="264" fill="#94a3b8" font-size="15">Net simulated P&amp;L</text>
     <line x1="760" y1="286" x2="1012" y2="286" stroke="#334155"/>
     <text x="760" y="320" fill="#e5e7eb" font-size="18">Profit factor</text>
-    <text x="988" y="320" text-anchor="end" fill="#facc15" font-size="20" font-weight="700">1.514</text>
+    <text x="988" y="320" text-anchor="end" fill="#facc15" font-size="20" font-weight="700">1.624</text>
     <text x="760" y="350" fill="#e5e7eb" font-size="18">Return / drawdown</text>
-    <text x="988" y="350" text-anchor="end" fill="#38bdf8" font-size="20" font-weight="700">5.921</text>
-    <text x="760" y="380" fill="#94a3b8" font-size="14">+$31.19k vs immediate exit</text>
+    <text x="988" y="350" text-anchor="end" fill="#38bdf8" font-size="20" font-weight="700">9.520</text>
+    <text x="760" y="380" fill="#94a3b8" font-size="14">65-point cap + post-1R protection</text>
 
     <rect x="64" y="426" width="972" height="116" rx="10" fill="#151f2e" stroke="#334155"/>
     <text x="88" y="462" fill="#e5e7eb" font-size="18" font-weight="700">How the findings strengthen the research portfolio</text>

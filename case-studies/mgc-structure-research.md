@@ -64,11 +64,26 @@ its own settings rather than inherit another market's parameters automatically.
 The optional MGC paper path includes:
 
 - A hard maximum contract count.
+- A maximum initial-risk distance for accepted entries.
+- A deterministic protective-stop adjustment after the trade reaches +1R.
 - Separate broker client and strategy ownership.
 - Position-aware exits.
 - Telegram lifecycle notifications.
 - Private dashboard reconciliation.
 - Broker-held emergency protection derived from the accepted structure risk.
+
+The private dashboard preserves the original entry stop even after protection
+changes. It displays the initial risk in both points and dollars alongside the
+current broker-protective stop and its management state.
+
+## Latest Risk Finding
+
+The risk-managed version produced a small historical profit-factor improvement
+but lower net P&L and slightly worse standalone drawdown than the structural-stop
+comparison. A unified reference-portfolio replay showed lower aggregate
+drawdown with a modest reduction in net P&L. This mixed result is being treated
+as a paper-validation hypothesis rather than evidence that every risk measure
+improved.
 
 Live-account routing remains blocked.
 

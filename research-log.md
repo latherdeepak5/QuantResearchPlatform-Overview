@@ -227,3 +227,35 @@ The entry candle should still be near the pullback area. A prior pullback alone 
 - How does MES behavior compare with MNQ over the same testing periods?
 - Which no-trade days were correctly filtered versus overly restricted?
 - How closely will paper-trading signals match backtest and TradingView timing?
+# Research Log
+
+## 2026-07-26
+
+### MGC Risk-Managed Version
+
+Promoted a new private MGC research version with a capped initial-risk distance
+and a deterministic protective-stop adjustment after the position reaches +1R.
+The IBKR paper router reprices the existing broker-held stop rather than opening
+another position. The same lifecycle change is published to Telegram and the
+private dashboard.
+
+The private dashboard now distinguishes:
+
+- Original entry stop.
+- Current protective or trailing stop.
+- Initial risk in points and dollars.
+- Whether the +1R adjustment is pending or active.
+
+Historical comparison showed a marginal profit-factor improvement, lower net
+P&L, and slightly worse standalone MGC drawdown. The unified reference-portfolio
+replay reduced aggregate drawdown with a modest reduction in net P&L. The result
+is recorded as a balanced risk tradeoff and remains subject to paper validation.
+
+### Operations Platform Completion
+
+The private platform now includes centralized paper-session control, strategy
+health and routing controls, live lifecycle charts, portfolio analytics,
+notification history, automated daily reports, broker reconciliation,
+protective-stop integrity checks, and extended paper-validation gates.
+
+The complete private regression suite passed 336 tests.

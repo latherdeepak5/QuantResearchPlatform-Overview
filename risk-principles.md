@@ -36,6 +36,20 @@ protection, which is adjusted as the position is reduced and removed after final
 closure. Dynamic management still depends on the monitor, so this protection is
 a safety floor rather than a replacement for operational monitoring.
 
+### Preserve Initial Risk And Current Protection Separately
+
+The original trade risk must remain auditable after a stop moves. The private
+operations dashboard therefore keeps the entry stop and initial risk immutable
+while displaying the current broker-protective stop separately. This prevents a
+tighter stop from making the original risk appear smaller after the fact.
+
+### Evaluate Risk Rules At Portfolio Level
+
+A protective rule can reduce one portfolio-level drawdown measure while
+weakening an individual strategy's net return or standalone drawdown. Such
+changes are documented as tradeoffs and remain in paper validation until the
+combined benefit persists across additional periods and broker-paper fills.
+
 ### Reject Plausible Ideas When The Evidence Weakens
 
 A change is not accepted merely because it creates more trades or looks sensible on a chart. A recent MNQ delayed-confirmation variant reduced profit factor and increased drawdown, so it was removed even though it expanded opportunity count.

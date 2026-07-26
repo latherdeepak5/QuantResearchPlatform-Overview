@@ -20,6 +20,9 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Reconcile dashboard lifecycle records against every broker-paper fill
 - Verify broker-held stop quantities after partial fills and reconnects
 - Test recovery across IB Gateway daily auto-restarts and the weekly manual login
+- Compare the MGC capped-risk rule against broker-paper fills and slippage
+- Verify every +1R protective-stop update in IBKR, Telegram, and the dashboard
+- Track whether the lower reference-portfolio drawdown persists out of sample
 
 ## Medium-Term Research
 
