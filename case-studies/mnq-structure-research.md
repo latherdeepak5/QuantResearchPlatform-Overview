@@ -38,6 +38,22 @@ The evidence rejected that idea:
 
 The delayed branch was removed because it lowered combined profit factor and increased drawdown. This is an example of the platform's core research standard: more signals are not useful when their expected quality is negative.
 
+## Wide-Gap And Minimum-Distance Entry Research
+
+The structure model was extended with distance-aware entry handling:
+
+- When the reversal point sits unusually far from the trend indicator, the
+  entry price is pulled toward the trend indicator instead of the recent
+  candle, so accepted risk does not scale up with an unusually wide setup.
+- Long entries also gained a minimum-distance confirmation: a reversal
+  sitting too close to the trend indicator no longer qualifies for a long
+  entry at all. This trades some frequency for filtering out a category of
+  weaker long setups before they can be accepted.
+
+The TradingView deep-test script for this research path was reviewed against
+the updated private reference and corrected so it stays aligned with the
+execution reference used for paper monitoring.
+
 ## Paper-Execution Controls
 
 The selected MNQ model can run through the private IBKR paper workflow with:

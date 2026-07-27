@@ -2,6 +2,92 @@
 
 This log records high-level research milestones. It intentionally avoids exact implementation rules, private code, and proprietary parameter details.
 
+## 2026-07-27
+
+### Adaptive Risk-Based Target For MGC
+
+The MGC profit-target rule was made adaptive instead of fixed. Trades that
+needed a tighter, more favorable initial stop keep the original larger reward
+target; trades that required a wider initial stop settle for an earlier,
+smaller reward target. This keeps the risk-adjusted expectation more
+consistent across a wider range of accepted setups instead of applying one
+fixed target regardless of how large the initial risk was.
+
+### Wide-Gap Entry Handling For MGC And MNQ
+
+Both the MGC and MNQ research paths now recognize when the reversal point sits
+unusually far from the trend indicator. When that happens, the entry price is
+pulled toward the trend indicator instead of the recent candle, so accepted
+risk does not scale up with an unusually wide setup. Long and short entries
+are tuned independently rather than sharing one rule.
+
+MNQ long entries also gained a minimum-distance confirmation: a reversal that
+sits too close to the trend indicator no longer qualifies for a long entry at
+all. This filters out a category of weaker setups before they can be accepted,
+at the cost of some trade frequency.
+
+The TradingView deep-test scripts for MGC and MNQ were reviewed against the
+updated Python reference and several timing and detection gaps were corrected
+so the chart-side validation layer stays aligned with the private execution
+reference.
+
+### Audit Trail And Dashboard Integrity
+
+The private operations dashboard's audit trail now mirrors every live signal
+event in real time in addition to its historical reconstruction. A
+data-integrity gap was found while cross-checking a live MGC exit: the same
+real trade could be reported more than once when it arrived through different
+internal pipelines with slightly different timestamps. The trade-identity
+logic was corrected to recognize these as one trade, and every lifecycle now
+shows a visible stage (entered, partially closed, closed) instead of a single
+raw status string.
+
+A related naming inconsistency let one MGC strategy appear under two
+different labels across the live ledger, audit trail, and research views.
+This is now fixed; all three views consistently show the same five retained
+strategies.
+
+The research view also now shows each retained strategy's live operating
+status (contract size, active or paused) directly alongside its historical
+performance row, instead of requiring a separate lookup.
+
+### Verification
+
+- The private automated suite now passes 361 tests.
+- Generated ledgers, credentials, account identifiers, and executable
+  strategy logic remain excluded from this public repository.
+
+## 2026-07-26
+
+### MGC Risk-Managed Version
+
+Promoted a new private MGC research version with a capped initial-risk
+distance and a deterministic protective-stop adjustment after the position
+reaches +1R. The IBKR paper router reprices the existing broker-held stop
+rather than opening another position. The same lifecycle change is published
+to Telegram and the private dashboard.
+
+The private dashboard now distinguishes:
+
+- Original entry stop.
+- Current protective or trailing stop.
+- Initial risk in points and dollars.
+- Whether the +1R adjustment is pending or active.
+
+Historical comparison showed a marginal profit-factor improvement, lower net
+P&L, and slightly worse standalone MGC drawdown. The unified reference-portfolio
+replay reduced aggregate drawdown with a modest reduction in net P&L. The result
+is recorded as a balanced risk tradeoff and remains subject to paper validation.
+
+### Operations Platform Completion
+
+The private platform now includes centralized paper-session control, strategy
+health and routing controls, live lifecycle charts, portfolio analytics,
+notification history, automated daily reports, broker reconciliation,
+protective-stop integrity checks, and extended paper-validation gates.
+
+The complete private regression suite passed 336 tests.
+
 ## 2026-07-23
 
 ### Unified Paper-Execution Review Layer
@@ -227,35 +313,3 @@ The entry candle should still be near the pullback area. A prior pullback alone 
 - How does MES behavior compare with MNQ over the same testing periods?
 - Which no-trade days were correctly filtered versus overly restricted?
 - How closely will paper-trading signals match backtest and TradingView timing?
-# Research Log
-
-## 2026-07-26
-
-### MGC Risk-Managed Version
-
-Promoted a new private MGC research version with a capped initial-risk distance
-and a deterministic protective-stop adjustment after the position reaches +1R.
-The IBKR paper router reprices the existing broker-held stop rather than opening
-another position. The same lifecycle change is published to Telegram and the
-private dashboard.
-
-The private dashboard now distinguishes:
-
-- Original entry stop.
-- Current protective or trailing stop.
-- Initial risk in points and dollars.
-- Whether the +1R adjustment is pending or active.
-
-Historical comparison showed a marginal profit-factor improvement, lower net
-P&L, and slightly worse standalone MGC drawdown. The unified reference-portfolio
-replay reduced aggregate drawdown with a modest reduction in net P&L. The result
-is recorded as a balanced risk tradeoff and remains subject to paper validation.
-
-### Operations Platform Completion
-
-The private platform now includes centralized paper-session control, strategy
-health and routing controls, live lifecycle charts, portfolio analytics,
-notification history, automated daily reports, broker reconciliation,
-protective-stop integrity checks, and extended paper-validation gates.
-
-The complete private regression suite passed 336 tests.

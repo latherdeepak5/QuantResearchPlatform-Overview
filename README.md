@@ -70,10 +70,30 @@ Recent research suggests the strategy behaves better when:
 - Python-based monitoring is the preferred execution reference when chart-platform historical fill modeling materially differs from private backtest assumptions
 - Phone notifications can now be tested independently from broker order routing, which reduces integration risk
 - Opening-range entries improve when weaker time windows are excluded and the remaining windows are validated across multiple years
+- A single fixed profit target is not always appropriate; letting the target adapt to how large the initial risk turned out to be keeps expectation more consistent across setups
+- Reporting integrity is itself a risk control: the same live trade can be double-reported when it flows through more than one internal pipeline, and that has to be reconciled with the same rigor applied to the strategy logic itself
 
 These findings are still under active validation and may change as more data is tested.
 
 ## Latest Milestone
+
+On July 27, 2026, the MGC profit-target rule was made adaptive to the size of
+the initial risk taken on each trade, and both MGC and MNQ research gained
+wide-gap entry handling that pulls the entry price toward the trend indicator
+when a reversal sits unusually far away from it, instead of scaling risk up
+with the width of the setup. MNQ long entries also gained a minimum-distance
+confirmation that filters out reversals sitting too close to the trend
+indicator to trust as a long entry.
+
+Separately, a data-integrity gap was found and fixed in the private operations
+dashboard: the same real MGC trade could be reported more than once when it
+arrived through different internal reporting pipelines with slightly
+different timestamps. The trade-identity logic now recognizes these as one
+trade, every lifecycle shows a visible stage instead of a single raw status,
+and a related strategy-naming inconsistency that let one MGC strategy appear
+under two labels has been corrected so the live ledger, audit trail, and
+research views consistently show the same five retained strategies. The
+private automated suite now passes 361 tests.
 
 On July 26, 2026, the private platform promoted a fourth MGC research version
 with an explicit maximum initial-risk distance and a rule-based protective-stop

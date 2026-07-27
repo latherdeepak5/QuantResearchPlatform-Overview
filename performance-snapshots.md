@@ -177,6 +177,35 @@ therefore being retained for paper validation as a portfolio-risk tradeoff.
   starting capital, margin constraints, simultaneous-position rules,
   correlation, slippage, and broker-paper fills.
 
+## Snapshot: Reference Portfolio, Five Retained Strategies
+
+This is the current private reference-research portfolio: five independently
+retained strategies replayed together as one raw, one-unit-per-strategy
+combined view. It is a research construct, not a capital-allocated live
+portfolio.
+
+| Retained strategy | Trades | Win rate | Net simulated P&L | Profit factor | Max drawdown |
+|---|---:|---:|---:|---:|---:|
+| MES opening-range | 80 | 55.00% | +$39,756.25 | 2.25 | -$6,945.00 |
+| MES pullback | 49 | 79.59% | +$24,300.00 | 4.90 | -$3,066.01 |
+| MNQ opening-range | 33 | 69.70% | +$29,680.00 | 4.74 | -$1,932.50 |
+| MNQ structure (CHoCH) | 316 | 44.62% | +$108,911.48 | 2.13 | -$5,656.00 |
+| MGC structure (CHoCH) | 472 | 38.56% | +$169,131.81 | 1.80 | -$13,649.39 |
+| **Combined, raw one-unit view** | **950** | — | **+$371,779.54** | — | **-$12,417.32 (-3.45%)** |
+
+The MNQ and MGC structure trade counts and net P&L differ from the earlier
+snapshots above because both research paths were revised with the adaptive
+target and wide-gap entry work recorded in the research log, and because more
+history has since been replayed through them. This snapshot supersedes the
+standalone MNQ and MGC figures shown earlier on this page for current
+reference; the earlier snapshots are kept for continuity of the research
+record, not as the latest state.
+
+As with every multi-sleeve view on this page, the combined row assumes one
+unit of size per strategy replayed independently and summed. It does not yet
+model shared capital, margin, correlation, or simultaneous-position
+constraints across all five strategies at once.
+
 ## What These Snapshots Do Not Show
 
 These snapshots do not include:

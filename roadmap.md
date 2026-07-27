@@ -23,6 +23,8 @@ This roadmap lists high-level future research tasks. It does not disclose privat
 - Compare the MGC capped-risk rule against broker-paper fills and slippage
 - Verify every +1R protective-stop update in IBKR, Telegram, and the dashboard
 - Track whether the lower reference-portfolio drawdown persists out of sample
+- Validate that the adaptive risk-based target and wide-gap entry handling remain stable across additional MGC and MNQ regimes
+- Continue auditing reporting pipelines for duplicate or mislabeled records as new reporting paths are added
 
 ## Medium-Term Research
 

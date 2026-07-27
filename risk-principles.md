@@ -50,6 +50,24 @@ weakening an individual strategy's net return or standalone drawdown. Such
 changes are documented as tradeoffs and remain in paper validation until the
 combined benefit persists across additional periods and broker-paper fills.
 
+### Let The Target Adapt To The Risk Taken
+
+A single fixed profit target does not fit every accepted setup equally well.
+When a trade's initial risk turns out larger than usual, holding out for the
+same large reward multiple stops being realistic. The research now lets the
+target step down for wider-risk trades so the reward expectation stays
+consistent with the risk actually taken, rather than optimizing one target for
+the average case and hoping it generalizes to the extremes.
+
+### Treat Reporting Integrity As A Risk Control
+
+A strategy can be behaving correctly while its own reporting misrepresents
+what happened. The same real trade being recorded more than once through
+different internal pipelines is a data-integrity failure with the same
+consequence as a strategy-logic error: the operator can no longer trust what
+the dashboard says happened. Reconciling duplicate or mislabeled records
+receives the same scrutiny as reconciling a broker fill.
+
 ### Reject Plausible Ideas When The Evidence Weakens
 
 A change is not accepted merely because it creates more trades or looks sensible on a chart. A recent MNQ delayed-confirmation variant reduced profit factor and increased drawdown, so it was removed even though it expanded opportunity count.

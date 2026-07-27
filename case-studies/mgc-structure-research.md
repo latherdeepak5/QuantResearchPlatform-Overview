@@ -87,6 +87,24 @@ improved.
 
 Live-account routing remains blocked.
 
+## Adaptive Target And Wide-Gap Entry Research
+
+Two further refinements were added on top of the risk-managed version:
+
+- The profit target is no longer fixed. Trades that needed a tighter, more
+  favorable initial stop keep the original larger reward target; trades that
+  required a wider initial stop settle for an earlier, smaller reward target.
+  This keeps the risk-adjusted expectation more consistent across the full
+  range of accepted setups.
+- When the reversal point sits unusually far from the trend indicator, the
+  entry price is now pulled toward the trend indicator instead of the recent
+  candle, so accepted risk does not scale up with an unusually wide setup.
+  Long and short entries are tuned independently.
+
+The TradingView deep-test script for this research path was reviewed against
+the updated private reference and corrected so it stays aligned with the
+execution reference used for paper monitoring.
+
 ## Next Questions
 
 - Does continuation behavior remain stable across different gold regimes?
