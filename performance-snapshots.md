@@ -189,17 +189,15 @@ portfolio.
 | MES opening-range | 80 | 55.00% | +$39,756.25 | 2.25 | -$6,945.00 |
 | MES pullback | 49 | 79.59% | +$24,300.00 | 4.90 | -$3,066.01 |
 | MNQ opening-range | 33 | 69.70% | +$29,680.00 | 4.74 | -$1,932.50 |
-| MNQ structure (CHoCH) | 316 | 44.62% | +$108,911.48 | 2.13 | -$5,656.00 |
-| MGC structure (CHoCH) | 472 | 38.56% | +$169,131.81 | 1.80 | -$13,649.39 |
-| **Combined, raw one-unit view** | **950** | — | **+$371,779.54** | — | **-$12,417.32 (-3.45%)** |
+| MNQ structure (CHoCH) | 274 | 46.72% | +$130,351.02 | 2.39 | -$5,607.11 |
+| MGC structure (CHoCH) | 353 | 39.38% | +$145,259.47 | 2.13 | -$8,349.97 |
+| **Combined, raw one-unit view** | **789** | **Not aggregated** | **+$369,346.74** | **Not aggregated** | **Not aggregated** |
 
-The MNQ and MGC structure trade counts and net P&L differ from the earlier
-snapshots above because both research paths were revised with the adaptive
-target and wide-gap entry work recorded in the research log, and because more
-history has since been replayed through them. This snapshot supersedes the
-standalone MNQ and MGC figures shown earlier on this page for current
-reference; the earlier snapshots are kept for continuity of the research
-record, not as the latest state.
+The July 29 refresh supersedes the standalone MNQ and MGC figures shown earlier
+on this page for the current reference. Earlier snapshots remain visible for
+continuity of the research record. The combined row deliberately does not
+aggregate win rate, profit factor, or drawdown because summing independent
+strategy replays would make those portfolio measures misleading.
 
 As with every multi-sleeve view on this page, the combined row assumes one
 unit of size per strategy replayed independently and summed. It does not yet

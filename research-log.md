@@ -2,6 +2,48 @@
 
 This log records high-level research milestones. It intentionally avoids exact implementation rules, private code, and proprietary parameter details.
 
+## 2026-07-29
+
+### Reference Portfolio Refresh
+
+The five retained research sleeves were replayed through the current private
+strategy catalog. The refreshed catalog contains 789 historical trades and
+approximately $369.3k of raw combined simulated P&L. Because each sleeve is
+replayed independently at one unit, this figure is not an account return and
+does not include shared capital, margin, correlation, or simultaneous-position
+constraints.
+
+The MNQ structure path retained a staged-entry growth configuration under a
+five-contract exposure cap. The MGC structure path became more selective after
+close-quality, re-entry, and exit-confluence research improved its current
+profit factor and drawdown relative to the prior public snapshot.
+
+### M2K Candidate Research
+
+An isolated M2K premarket breakout-and-retest candidate was added with Python
+research, TradingView validation, sensitivity comparisons, and automated
+contract tests. The candidate remains outside the retained reference portfolio
+because its holdout behavior does not yet justify promotion.
+
+### Broker And Dashboard Integrity
+
+The private dashboard now reports strategy-ledger P&L and IBKR paper-account
+P&L as separate measures. Broker reconciliation counts only positions backed
+by confirmed routed fills; alert-only signals no longer masquerade as broker
+positions or executable risk.
+
+Cross-monitor symbol ownership now prevents duplicate strategy processes from
+exceeding the five-contract cap. The same release expanded strategy controls,
+notification history, audit views, contract diagnostics, and Pine/Python
+parity checks.
+
+### Verification
+
+- The private automated suite passes 421 tests.
+- Live-account routing remains blocked.
+- Credentials, account identifiers, executable rules, raw data, and live
+  ledgers remain excluded from this public repository.
+
 ## 2026-07-27
 
 ### Adaptive Risk-Based Target For MGC

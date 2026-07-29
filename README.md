@@ -77,6 +77,34 @@ These findings are still under active validation and may change as more data is 
 
 ## Latest Milestone
 
+On July 29, 2026, the private reference portfolio was refreshed after a broad
+strategy and operations review. The retained five-strategy research catalog
+now contains 789 historical trades and approximately $369.3k of raw combined
+simulated P&L. This is an independent one-unit-per-strategy research view, not
+an IBKR account return or a capital-constrained portfolio result.
+
+The MNQ structure sleeve now uses staged entries with a strict five-contract
+exposure cap. The current reference replay contains 274 trades, approximately
+46.72% win rate, 2.39 profit factor, approximately $130.4k simulated net P&L,
+and approximately $5.6k maximum drawdown. The MGC structure sleeve retained a
+more selective quality and re-entry filter plus a confluence-based exit. Its
+current reference replay contains 353 trades, approximately 39.38% win rate,
+2.13 profit factor, approximately $145.3k simulated net P&L, and approximately
+$8.35k maximum drawdown.
+
+An M2K premarket breakout-and-retest idea was also implemented as an isolated
+research candidate with Python, TradingView, comparison reports, and automated
+tests. It has not been promoted into the retained portfolio because its
+out-of-sample behavior still requires more validation.
+
+The private operations dashboard now separates simulated strategy-ledger P&L
+from broker-reported IBKR paper-account P&L. Position reconciliation also
+requires confirmed broker routing and fills, so monitor-only alerts cannot
+create false broker mismatches, inflated executable risk, or unnecessary
+session halts. Live symbol-ownership guards enforce the five-contract cap
+across concurrent monitors. The complete private automated suite now passes
+421 tests.
+
 On July 27, 2026, the MGC profit-target rule was made adaptive to the size of
 the initial risk taken on each trade, and both MGC and MNQ research gained
 wide-gap entry handling that pulls the entry price toward the trend indicator
